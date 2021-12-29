@@ -1,16 +1,10 @@
 import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { registerUser } from "../../actions/authActions";
-import classnames from "classnames";
-
-class Register extends Component {
+import { Link } from "react-router-dom";
+class Login extends Component {
   constructor() {
     super();
     this.state = {
       email: "",
-      phonenumber: "",
       password: "",
       errors: {}
     };
@@ -20,18 +14,17 @@ onChange = e => {
   };
 onSubmit = e => {
     e.preventDefault();
-const newUser = {
+const userData = {
       email: this.state.email,
-      phonenumber: this.state.phonenumber,
       password: this.state.password
     };
-console.log(newUser);
+console.log(userData);
   };
-  render() {
+render() {
     const { errors } = this.state;
 return (
       <div className="container">
-        <div className="row">
+        <div style={{ marginTop: "4rem" }} className="row">
           <div className="col s8 offset-s2">
             <Link to="/" className="btn-flat waves-effect">
               <i className="material-icons left">keyboard_backspace</i> Back to
@@ -39,10 +32,10 @@ return (
             </Link>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
               <h4>
-                <b>Register</b> below
+                <b>Login</b> below
               </h4>
               <p className="grey-text text-darken-1">
-                Already have an account? <Link to="/login">Log in</Link>
+                Don't have an account? <Link to="/register">Register</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
@@ -55,16 +48,6 @@ return (
                   type="email"
                 />
                 <label htmlFor="email">Email</label>
-              </div>
-              <div className="input-field col s12">
-                <input
-                  onChange={this.onChange}
-                  value={this.state.phonenumber}
-                  error={errors.phonenumber}
-                  id="phonenumber"
-                  type="text"
-                />
-                <label htmlFor="phonenumber">Name</label>
               </div>
               <div className="input-field col s12">
                 <input
@@ -87,7 +70,7 @@ return (
                   type="submit"
                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"
                 >
-                  Sign up
+                  Login
                 </button>
               </div>
             </form>
@@ -97,11 +80,4 @@ return (
     );
   }
 }
-const mapStateToProps = state => ({
-    auth: state.auth,
-    errors: state.errors
-  });
-export default connect(
-    mapStateToProps,
-    { registerUser }
-  )(withRouter(Register));
+export default Login;
