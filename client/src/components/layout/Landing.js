@@ -7,7 +7,7 @@ class Landing extends Component {
         <div className="row">
           <div className="col s12 center-align">
             <h4>
-              <b> TASK 1{" "} DESKALA</b>
+              TASK 1 
             </h4>
             <p className="flow-text grey-text text-darken-1">
             Create a Signup form , Login Form – UI and corresponding backend APIs and database
