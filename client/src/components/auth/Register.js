@@ -33,8 +33,8 @@ onChange = e => {
   };
 onSubmit = e => {
     e.preventDefault();
-const newUser = {
-     
+    
+      const newUser = { 
       email: this.state.email,
       phonenumber: this.state.phonenumber,
       password: this.state.password,
@@ -129,6 +129,7 @@ Register.propTypes = {
   auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
+
 const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors
@@ -137,4 +138,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { registerUser }
-)(withRouter(Register));;
+)(withRouter(Register));
