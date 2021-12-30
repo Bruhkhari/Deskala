@@ -3,15 +3,15 @@ const isEmpty = require("is-empty");
 module.exports = function validateLoginInput(data) {
   let errors = {};
 // Convert empty fields to an empty string so we can use validator functions
-  data.Name = !isEmpty(data.Name) ? data.Name : "";
+  data.name = !isEmpty(data.name) ? data.name : "";
   data.Address = !isEmpty(data.Address) ? data.Address : "";
   data.DOB = !isEmpty(data.DOB) ? data.DOB : "";
   data.State = !isEmpty(data.State) ? data.State : "";
   data.Age = !isEmpty(data.Age) ? data.Age : "";
   data.Pincode = !isEmpty(data.Pincode) ? data.Pincode : "";
-  // Name checks
-  if (Validator.isEmpty(data.any)) {
-    errors.Name = "Name field is required";
+  // name checks
+  if (Validator.isEmpty(data.name)) {
+    errors.name = "name field is required";
   }// Address checks
   if (Validator.isEmpty(data.Address)) {
     errors.Address = "Address field is required";
