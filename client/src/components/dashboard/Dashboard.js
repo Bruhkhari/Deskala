@@ -14,11 +14,11 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
 
     return (
-      <div style={{ height: "25vh" }} className="container valign-wrapper">
+      <div style={{ height: "20vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="landing-copy col s12 center-align">
             <h4>
-              <b>Task 2</b> 
+              Task 2
             </h4>
             <button
               style={{
