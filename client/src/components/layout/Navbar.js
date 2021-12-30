@@ -12,7 +12,7 @@ class Navbar extends Component {
               style={{
                 fontFamily: "roboto"
               }}
-              className="col s5 brand-logo center black-text"> DESKALA
+              className="col s5 brand-logo center black-text"> <b>DESKALA</b>
             </Link>
           </div>
         </nav>
